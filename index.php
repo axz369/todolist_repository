@@ -11,7 +11,6 @@
 <?php
 $addContent = @$_POST["add"];
 
-
 //sql接続
 include('sql.php');
 
