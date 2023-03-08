@@ -7,9 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-<table class="table">
 
-//データ表示
+<header>
+    qqq
+</header>
+
+<table class="table">
 <?php foreach($pdo->query('select * from listtable')as $row) : ?>
     <tr class="tableItem">
         <td><?php echo $row['id']; ?></td>

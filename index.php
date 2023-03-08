@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>TodoList</title>
 </head>
 <body>
     
 <?php
-$addContent = @$_POST["add"];
+if(isset($_POST["add"]))$addContent = $_POST["add"];
 
 //sql接続
 include('sql.php');
