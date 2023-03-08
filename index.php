@@ -24,6 +24,14 @@ if (mysqli_connect_errno()) {
 }
 ?>
 
+<table class="table">
+<?php foreach($pdo->query('select * from listtable')as $row) : ?>
+    <tr class="tableItem">
+        <td><?php echo $row['id']; ?></td>
+        <td><?php echo $row['content']; ?></td>
+    </tr>
+<?php endforeach ?>
+</table>
 
 </body>
 </html>
