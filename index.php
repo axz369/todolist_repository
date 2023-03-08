@@ -33,5 +33,10 @@ if (mysqli_connect_errno()) {
 <?php endforeach ?>
 </table>
 
+<form action="" method="post" class="form">
+    <textarea id="message" placeholder="新規メモ" name="add" cols="60" rows="3"></textarea>
+    <button type="submit">追加</button>
+</form>
+
 </body>
 </html>
