@@ -30,9 +30,6 @@ if(!empty($addContent)){
     $stmt = $pdo->prepare("INSERT INTO listtable(content) VALUE (:content)"); //SQL文の骨子を準備
     $stmt->bindvalue(":content", $addContent); //:titleをpost送信されたtitleの内容に置換
     $stmt->execute(); //SQL文を実行
-
-    //リダイレクト、データ表示
-    //header('Location: http://localhost/php/todolist_repository/');
 }
 
 //データ表示とフォーム

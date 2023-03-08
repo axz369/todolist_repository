@@ -12,7 +12,7 @@
 <?php foreach($pdo->query('select * from listtable')as $row) : ?>
     <tr class="tableItem">
         <td><?php echo $row['id']; ?></td>
-        <td><?php echo $row['content']; ?></td>
+        <td><?php echo nl2br($row['content']); ?></td>
     </tr>
 <?php endforeach ?>
 </table>
