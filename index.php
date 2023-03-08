@@ -9,6 +9,8 @@
 <body>
     
 <?php
+$addContent = @$_POST["add"];
+
 // DB接続設定
 $dsn = 'mysql:dbname=php_todolist;host=localhost';
 $user = 'root';
@@ -22,21 +24,17 @@ if (mysqli_connect_errno()) {
     echo "error: " . mysqli_connect_error() . PHP_EOL;
     exit();
 }
+
+
+if(!empty($addContent)){
+    echo $addContent;
+    //リダイレクト、データ表示
+    //header('Location: http://localhost/php/todolist_repository/');
+}
+
+//データ表示とフォーム
+include('view.php');
 ?>
-
-<table class="table">
-<?php foreach($pdo->query('select * from listtable')as $row) : ?>
-    <tr class="tableItem">
-        <td><?php echo $row['id']; ?></td>
-        <td><?php echo $row['content']; ?></td>
-    </tr>
-<?php endforeach ?>
-</table>
-
-<form action="" method="post" class="form">
-    <textarea id="message" placeholder="新規メモ" name="add" cols="60" rows="3"></textarea>
-    <button type="submit">追加</button>
-</form>
 
 </body>
 </html>
