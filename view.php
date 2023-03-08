@@ -13,9 +13,10 @@
     <tr class="tableItem">
         <td><?php echo $row['id']; ?></td>
         <td><?php echo nl2br($row['content']); ?></td>
+        <td><a href="delete.php?id=<?php echo $row['id'];?>">削除</a></td>
         <td>
-            <input type= "text" name= "del" value= "<?php echo $row[0]; ?>">
-            <button type="submit">削除する</button>
+            <input type= "text" name="deleteId" value= "<?php echo $row[0]; ?>">
+            <button type="submit" name="delete">削除する</button>
         </td>
     </tr>
 <?php endforeach ?>
