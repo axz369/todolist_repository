@@ -10,14 +10,19 @@
     
 <?php
 $addContent = @$_POST["add"];
+$count=0;
 
 //sql接続
 include('sql.php');
 
 if(!empty($addContent)){
     $stmt = $pdo->prepare("INSERT INTO listtable(content) VALUE (:content)"); //SQL文の骨子を準備
-    $stmt->bindvalue(":content", $addContent); //:titleをpost送信されたtitleの内容に置換
+    $stmt->bindvalue(":content", $addContent);
     $stmt->execute(); //SQL文を実行
+}
+if(!empty($_POST['del'])){
+    echo "aaa<br>";
+    echo $_POST['id'];
 }
 
 //データ表示とフォーム

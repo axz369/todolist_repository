@@ -13,12 +13,16 @@
     <tr class="tableItem">
         <td><?php echo $row['id']; ?></td>
         <td><?php echo nl2br($row['content']); ?></td>
+        <td>
+            <input type= "text" name= "del" value= "<?php echo $row[0]; ?>">
+            <button type="submit">削除する</button>
+        </td>
     </tr>
 <?php endforeach ?>
 </table>
 
 <form action="" method="post" class="form">
-    <textarea id="message" placeholder="新規メモ" name="add" cols="60" rows="3"></textarea>
+    <textarea placeholder="新規メモ" name="add" cols="60" rows="3"></textarea>
     <button type="submit">追加</button>
 </form>
 
