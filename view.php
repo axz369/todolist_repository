@@ -9,6 +9,7 @@
 <body>
 <table class="table">
 
+//データ表示
 <?php foreach($pdo->query('select * from listtable')as $row) : ?>
     <tr class="tableItem">
         <td><?php echo $row['id']; ?></td>

@@ -14,6 +14,7 @@ $addContent = @$_POST["add"];
 //sql接続
 include('sql.php');
 
+//追加
 if(!empty($addContent)){
     $stmt = $pdo->prepare("INSERT INTO listtable(content) VALUE (:content)"); //SQL文の骨子を準備
     $stmt->bindvalue(":content", $addContent);
