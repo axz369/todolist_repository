@@ -9,15 +9,14 @@
 <body>
 
 <header>
-    qqq
+    <p class="headerTitle">ToDoList</p>
 </header>
 
 <table class="table">
 <?php foreach($pdo->query('select * from listtable')as $row) : ?>
     <tr class="tableItem">
-        <td><?php echo $row['id']; ?></td>
-        <td><?php echo nl2br($row['content']); ?></td>
-        <td><a href="delete.php?id=<?php echo $row['id'];?>">削除</a></td>
+        <td class="content"><?php echo nl2br($row['content']); ?></td>
+        <td class="tdButton" align="center"><p class="deleteButton"><a href="delete.php?id=<?php echo $row['id'];?>">✖</a></p></td>
     </tr>
 <?php endforeach ?>
 </table>
