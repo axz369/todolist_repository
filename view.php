@@ -22,7 +22,8 @@
 </table>
 
 <form action="" method="post" class="form">
-    <textarea placeholder="新規メモ" name="add" cols="60" rows="3"></textarea>
+    <textarea placeholder="新規メモ" name="add" cols="65" rows="3"></textarea>
+    <br>
     <button type="submit">追加</button>
 </form>
 
