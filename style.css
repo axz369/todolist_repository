@@ -39,7 +39,7 @@ a{
 .form{
     text-align: center;
     padding-top: 50px;
-    
+    height: 700px;
 }
 
 .deleteButton{
@@ -57,9 +57,12 @@ a{
 
 textarea{
     background-color: #EEEEEE;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
-.addButton{
+button {
+    width: 100px;
+    height:45px;
     background-color: #637CBB;
-    font-size: 100px;
-}
+  }
